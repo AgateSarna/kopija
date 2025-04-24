@@ -2,7 +2,7 @@
   "name": "baltu-rotas-kopija",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://agatesarna.vercel.app",
+  "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
