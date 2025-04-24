@@ -4,7 +4,10 @@ import { useCart } from './CartContext';
 const CheckoutPage = () => {
   const { cartItems } = useCart();
 
-  const total = cartItems.reduce((sum, item) => sum + item.price, 0);
+  const total = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
   return (
     <div className="max-w-4xl mx-auto p-6">
@@ -15,9 +18,19 @@ const CheckoutPage = () => {
         <div className="space-y-4">
           <ul className="divide-y">
             {cartItems.map((item, index) => (
-              <li key={index} className="py-2 flex justify-between text-sm">
-                <span>{item.name}</span>
-                <span>{item.price.toFixed(2)} €</span>
+              <li key={index} className="py-3 flex items-center justify-between text-sm">
+                <div className="flex items-center gap-4">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-14 h-14 object-cover rounded"
+                  />
+                  <div>
+                    <p className="font-medium">{item.name}</p>
+                    <p className="text-gray-500">{item.quantity} gab</p>
+                  </div>
+                </div>
+                <span className="text-right">{(item.price * item.quantity).toFixed(2)} €</span>
               </li>
             ))}
           </ul>

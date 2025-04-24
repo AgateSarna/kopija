@@ -19,6 +19,7 @@ import davanucover from './assets/davanu-cover.png';
 import gredzenucover from './assets/gredzenipar.jpg';
 import kulonucover from './assets/kulonipar.jpg';
 import aprocucover from './assets/aprocespar.jpg';
+import TestNotice from './TestNotice';
 
 
 
@@ -48,7 +49,9 @@ const App = () => {
 
   return (
     <Router>
-    <div className="min-h-screen bg-gray-50 font-sans text-[#1c203c]">
+       <div className="min-h-screen bg-gray-50 font-sans text-[#1c203c]">
+       <TestNotice />
+ 
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto relative py-3 px-6 flex items-center">
 
@@ -69,19 +72,13 @@ const App = () => {
                       <li><Link to="/gredzeni" className="hover:underline">Gredzeni</Link></li>
                       <li><Link to="/aproces" className="hover:underline">Aproces</Link></li>
                       <li><Link to="/auskari" className="hover:underline">Auskari</Link></li>
-                      <li><Link to="/piespraudes-saktas" className="hover:underline">Piespraudes, Saktas</Link></li>
-                      <li><Link to="/kuloni-kaklarotas" className="hover:underline">Kuloni, Kaklarotas</Link></li>
-                      <li><Link to="/aprocpogas" className="hover:underline">Apročpogas</Link></li>
+                      <li><Link to="/kuloni" className="hover:underline">Kuloni</Link>
+                      </li>
                     </ul>
                   </div>
                   <div>
                     <ul className="space-y-1">
                       <li><Link to="/laulibu-gredzeni" className="hover:underline">Laulību gredzeni</Link></li>
-                      <li><Link to="/saulespukes" className="hover:underline">Saulespuķes</Link></li>
-                      <li><Link to="/kafija-krustnaglinas" className="hover:underline">Kafija un krustnagliņas</Link></li>
-                      <li><Link to="/namejs" className="hover:underline">Namejs</Link></li>
-                      <li><Link to="/rozes" className="hover:underline">Rozes</Link></li>
-                      <li><Link to="/senas-zimes" className="hover:underline">Senās zīmes</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -152,7 +149,7 @@ const App = () => {
         <img src={gredzenucover} alt="Gredzeni" className="mx-auto mb-4 rounded" />
         <h3 className="text-xl font-semibold">Gredzeni</h3>
       </Link>
-      <Link to="/kuloni-kaklarotas" className="block bg-white rounded shadow hover:shadow-lg transition p-6 text-center">
+      <Link to="/kuloni" className="block bg-white rounded shadow hover:shadow-lg transition p-6 text-center">
         <img src={kulonucover} alt="Kuloni" className="mx-auto mb-4 rounded" />
         <h3 className="text-xl font-semibold">Kuloni un kaklarotas</h3>
       </Link>
@@ -228,13 +225,16 @@ const App = () => {
 
 
 
-                <section id="kontakti" className="bg-white py-10">
-                  <div className="max-w-3xl mx-auto px-4">
-                    <h2 className="text-2xl font-bold mb-4">Kontakti</h2>
-                    <p className="text-gray-700 mb-2">E-pasts: info@balturotas.lv</p>
-                    <p className="text-gray-700">Tālrunis: +371 12345678</p>
-                  </div>
-                </section>
+<section
+  id="kontakti"
+  className="bg-white py-20 flex items-center justify-center text-center"
+>
+  <div className="max-w-3xl px-4">
+    <h2 className="text-2xl font-bold mb-4">Kontakti</h2>
+    <p className="text-gray-700 mb-2">E-pasts: info@balturotas.lv</p>
+    <p className="text-gray-700">Tālrunis: +371 12345678</p>
+  </div>
+</section>
               </>
             }
           />
@@ -243,10 +243,7 @@ const App = () => {
             'gredzeni',
             'aproces',
             'auskari',
-            'piespraudes-saktas',
-            'kuloni-kaklarotas',
-            'apročpogas',
-            'saulespukes',
+            'kuloni',
             'kafija-krustnaglinas',
             'namejs',
             'rozes',

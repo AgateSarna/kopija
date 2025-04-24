@@ -41,18 +41,6 @@ const ProductDetails = () => {
     <div className="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-6">
       <div>
         <img src={product.image} alt={product.name} className="w-full rounded" />
-        {cartItems.length > 0 && (
-          <div className="mt-6">
-            <h2 className="text-lg font-semibold mb-2">Grozā:</h2>
-            <ul className="space-y-2">
-              {cartItems.map((item, index) => (
-                <li key={index} className="text-sm border-b pb-1">
-                  {item.name} – {item.price.toFixed(2)} €
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
       <div className="space-y-4">
         <h1 className="text-2xl font-bold">{product.name}</h1>
@@ -62,8 +50,6 @@ const ProductDetails = () => {
         <p>{product.size}</p>
         <p className="text-sm text-gray-500">Metāls</p>
         <p>{product.material}</p>
-        <p className="text-sm text-gray-500">Kods</p>
-        <p>{product.code}</p>
         <div className="flex items-center gap-4 mt-4">
           <span className="text-xl font-semibold">{product.price.toFixed(2)} €</span>
           <button

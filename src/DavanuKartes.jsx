@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import davanuImg from './assets/cover.png'; // nomaini uz savu ceļu
+import d1 from './assets/d1.png';
+import d2 from './assets/d2.png';
+import d3 from './assets/d3.png'; 
 
 const DavanuKartes = () => {
   const [active, setActive] = useState('veikals');
@@ -8,17 +10,17 @@ const DavanuKartes = () => {
     veikals: {
       title: 'Veikala dāvanu karte',
       text: `Dāvanu karte rotu izvēlei. Karti saņēmējs varēs izmantot gan mūsu veikalos Vecrīgā un Siguldā, gan interneta veikalā. Kartes var saņemt gan ar piegādi, gan elektroniski e-pastā. E-pastā tā tiks automātiski nosūtīta uzreiz pēc samaksas veikšanas.`,
-      img: davanuImg
+      img: d1
     },
     namejs: {
       title: 'Nameja meistarklases dāvanu karte',
       text: `Unikāla pieredze - oriģināla dāvana cilvēkam, kam viss jau ir. Arī īpašs piedzīvojums pārim vai ģimenei. Dāvanu karte dos iespēju piedalīties Nameja meistarklasē, mūsu meistara vadībā pašam uzpīt savu sudraba gredzenu vai kulonu (aproci). Meistarklases norisinās mūsu Siguldas veikaliņā. Cenā iekļauts materiāls un viss nepieciešamais, kā arī kafija, tēja un uzkodas.`,
-      img: davanuImg
+      img: d2
     },
     nospiedums: {
       title: 'Nospiedumu meistarklases dāvanu karte',
       text: `Īpaša dāvana - dalība meistarklasē, izzinot savu pirkstu nospiedumu unikalitāti un veidojot neatkārtojamu Tava pirkstu nospieduma rotu kopā ar mums. Dāvanu karti iespējams saņemt gan elektroniski, gan drukātā veidā.`,
-      img: davanuImg
+      img: d3
     }
   };
 
@@ -45,12 +47,12 @@ const DavanuKartes = () => {
               <p className="text-gray-700 text-base mb-6 leading-relaxed whitespace-pre-line">
                 {current.text}
               </p>
-              <a
-                href="mailto:info@balturotas.lv?subject=Pasūtīt dāvanu karti"
-                className="inline-block text-xl font-semibold underline underline-offset-4 text-[#1c203c] hover:text-blue-800 transition"
-              >
-                Pasūtīt →
-              </a>
+              <button
+  type="button"
+  className="inline-block text-xl font-semibold underline underline-offset-4 text-[#1c203c] hover:text-blue-800 transition"
+>
+  Pasūtīt →
+</button>
             </div>
 
             {/* Attēls vienmēr pa labi */}

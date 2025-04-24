@@ -12,7 +12,6 @@ const filters = [
   { name: 'Gredzeni', icon: gredzeniIcon },
   { name: 'Aproces', icon: aprocesIcon },
   { name: 'Auskari', icon: auskariIcon },
-  { name: 'Piespraudes, Saktas', icon: piespraudesIcon },
   { name: 'Kuloni', icon: kuloniIcon },
 ];
 
@@ -23,14 +22,18 @@ const RotasPage = () => {
   const [selected, setSelected] = useState([]);
 
   useEffect(() => {
-    const path = location.pathname.replace('/', '');
-    const capitalized = path.charAt(0).toUpperCase() + path.slice(1);
-    if (filters.includes(capitalized)) {
-      setSelected([capitalized]);
+    const path = decodeURIComponent(location.pathname.replace('/', ''));
+    const match = filters.find(f =>
+      f.name.toLowerCase().replace(/\s/g, '').replace(/,/g, '').includes(path)
+    )?.name;
+    if (match) {
+      setSelected([match]);
     } else {
       setSelected([]);
     }
   }, [location.pathname]);
+  
+  
 
   const toggleFilter = (type) => {
     setSelected((prev) =>
