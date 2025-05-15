@@ -20,6 +20,7 @@ import gredzenucover from './assets/gredzenipar.jpg';
 import kulonucover from './assets/kulonipar.jpg';
 import aprocucover from './assets/aprocespar.jpg';
 import TestNotice from './TestNotice';
+import BigFive from './BigFive';
 
 
 
@@ -51,6 +52,7 @@ const App = () => {
     <Router>
        <div className="min-h-screen bg-gray-50 font-sans text-[#1c203c]">
        <TestNotice />
+       <BigFive />
  
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto relative py-3 px-6 flex items-center">

@@ -16,7 +16,7 @@ const TestNotice = () => {
       <div className="bg-white p-6 rounded-lg max-w-md text-center shadow-xl">
         <h2 className="text-xl font-bold mb-4">Uzmanību!</h2>
         <p className="text-gray-700 mb-4">
-          Šī mājaslapa ir paredzēta tikai <strong>testēšanai</strong>. Lūdzu, neveiciet reālus pirkumus.
+          Šī mājaslapa ir paredzēta tikai <strong>testēšanai</strong>. Lūdzu novērtējiet savu personību "Big Five" personības skalā.
         </p>
         <button
           onClick={() => setIsOpen(false)}
